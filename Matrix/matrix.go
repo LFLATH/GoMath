@@ -17,24 +17,25 @@ func Display(array [][]float64) {
 	for i := 0; i < len(array); i++ {
 		for j := 0; j < len(array[i]); j++ {
 			fmt.Print(array[i][j])
+			fmt.Print(" ")
 		}
 		fmt.Println()
 	}
 }
 
 /*
-Method: checkDims
+Method: CheckDims
 Parameters: Two 2D float slices
 Return: a boolean
 How it works: checks if two matricies can be multiplied together by finding if the number of
 columns in the first matrix are equal to the number of rows in the second.
 */
-func checkDims(array1 [][]float64, array2 [][]float64) bool {
+func CheckDims(array1 [][]float64, array2 [][]float64) bool {
 	return (len(array1[0]) == len(array2))
 }
 
 /*
-Method: dot
+Method: Dot
 Parameters: Two 2D float slices
 Return: a 2D float slice and an error
 How it works: This method starts by checking if the two matrcies have the correct
@@ -47,8 +48,8 @@ Next, if the matricies can multiple we create a third array of the correct dimen
 Then we take the dot product of the two matricies assigning the answers to the corresponding
 indexes in our result array. Lastly we return the matrix and a nil for the error.
 */
-func dot(array1 [][]float64, array2 [][]float64) ([][]float64, error) {
-	if !checkDims(array1, array2) {
+func Dot(array1 [][]float64, array2 [][]float64) ([][]float64, error) {
+	if !CheckDims(array1, array2) {
 		array3 := make([][]float64, len(array1))
 		for i := range array3 {
 			array3[i] = make([]float64, len(array2[0]))
