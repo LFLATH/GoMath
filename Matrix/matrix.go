@@ -6,14 +6,14 @@ import (
 )
 
 /*
-Method: display
+Method: Display
 Parameters: One 2D float slice
 Return: void
 How it works: This method's purpose is to automate the tedious task of writing
 two nested for loops every time you want to print out a 2D slice. I find myself
 doing this a lot while debugging, so I wrote a simple method to make it faster.
 */
-func display(array [][]float64) {
+func Display(array [][]float64) {
 	for i := 0; i < len(array); i++ {
 		for j := 0; j < len(array[i]); j++ {
 			fmt.Print(array[i][j])
