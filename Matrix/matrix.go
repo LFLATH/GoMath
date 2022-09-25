@@ -64,7 +64,7 @@ func Dot(array1 [][]float64, array2 [][]float64) ([][]float64, error) {
 	for i := 0; i < len(array1); i++ {
 		for j := 0; j < len(array2[0]); j++ {
 			for k := 0; k < len(array2); k++ {
-				total += array1[i][k] + array2[k][j]
+				total += array1[i][k] * array2[k][j]
 			}
 			array3[i][j] = total
 			total = 0
