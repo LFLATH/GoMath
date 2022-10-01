@@ -87,10 +87,10 @@ func Transpose(array1 [][]float64) [][]float64 {
 	return array2
 }
 
-func Madd(array [][]float64 ) (float64) {
+func Sum(array [][]float64) float64 {
 	var sum float64 = 0.0
-	for i := 0 ; i <  len(array); i++{
-		for j := 0 ; j <  len(array); j++{
+	for i := 0; i < len(array); i++ {
+		for j := 0; j < len(array); j++ {
 			sum += array[i][j]
 		}
 	}
