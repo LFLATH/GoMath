@@ -96,3 +96,8 @@ func Total(array [][]float64) float64 {
 	}
 	return sum
 }
+
+func Test() {
+
+	fmt.Println("Hello")
+}
