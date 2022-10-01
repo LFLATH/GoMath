@@ -90,7 +90,7 @@ func Transpose(array1 [][]float64) [][]float64 {
 func Sum(array [][]float64) float64 {
 	var sum float64 = 0.0
 	for i := 0; i < len(array); i++ {
-		for j := 0; j < len(array); j++ {
+		for j := 0; j < len(array[0]); j++ {
 			sum += array[i][j]
 		}
 	}
