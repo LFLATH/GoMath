@@ -74,7 +74,7 @@ func Dot(array1 [][]float64, array2 [][]float64) ([][]float64, error) {
 	return array3, nil
 }
 
-func Transpose(array1 [][]float64) {
+func Transpose(array1 [][]float64) [][]float64 {
 	array2 := make([][]float64, len(array1[0]))
 	for i := range array2 {
 		array2[i] = make([]float64, len(array1))
@@ -84,4 +84,5 @@ func Transpose(array1 [][]float64) {
 			array2[i][j] = array1[j][i]
 		}
 	}
+	return array2
 }
